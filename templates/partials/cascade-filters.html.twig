@@ -1,12 +1,22 @@
-7{# generate url link, the link has 3 states: active normal disabled #}
+{# generate url link, the link has 3 states: active normal disabled #}
 {% macro genQueryUrl(queries, key, tax, url, cascadeFilters) %}
 	{% set active = '' %}
-	{% if  queries[key] is defined and queries[key] == tax %}
-		{% set queries = queries|merge({(key): null}) %}
-		{% set active = 'is-active' %}
+
+	{% if  queries[key] is defined and ( queries[key] == tax or queries[key] is iterable ) %}
+		{% if queries[key] is iterable %}
+			{% if tax in queries[key] %}
+
+				{% set queries = queries|merge({(key): null}) %}
+				{% set active = 'is-active' %}
+			{% endif %}
+		{% else %}
+			{% set queries = queries|merge({(key): null}) %}
+			{% set active = 'is-active' %}
+		{% endif %}
 	{% else %}
 		{% set queries = queries|merge({(key): tax})  %}
 	{% endif %}
+
 	{% set disabled = cascadeFilters.isDisabled((queries))?'disabled':'' %}
 	{% set status = active? (active) : (disabled) %}
         <a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax|capitalize }}</a>

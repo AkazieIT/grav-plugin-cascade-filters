@@ -1,7 +1,6 @@
 name: Cascade Filters
-version: 0.1.0
-description: Cascadefilters is a Grav plugin that generates a multiple layer filters collected throughout the site. main features includes: selectable taxonomy types; links have 3 states: normal, active, disable ( the plugin will loop the child items's taxomomies to check if a link will continue to work or not, in another words, the filters are associated; Generally, the plugin provides a pages selector to let you choice where to place the filters on, but it not designed for a site-wide usage.
-
+version: 1.0.0
+description: fork by akazie IT
 icon: shower
 author:
   name: Elvis Cheng

@@ -1,8 +1,8 @@
 # Cascade Filters Plugin
 
-The **Cascade Filters** Plugin is for [Grav CMS](http://github.com/getgrav/grav). Cascadefilters is a Grav plugin that generates a multiple layer filters collected throughout the site. main features includes: 
-* Selectable taxonomy types; 
-* Links have 3 states: normal, active, disabled ( the plugin will loops the child items's taxomomies to check if a link will continue to work or not, in another words, the filters are associated; 
+The **Cascade Filters** Plugin is for [Grav CMS](http://github.com/getgrav/grav). Cascadefilters is a Grav plugin that generates a multiple layer filters collected throughout the site. main features includes:
+* Selectable taxonomy types;
+* Links have 3 states: normal, active, disabled ( the plugin will loops the child items's taxomomies to check if a link will continue to work or not, in another words, the filters are associated;
 * Generally, the plugin provides a pages selector to let you choice where to place the filters on, but it not designed for a site-wide usage. However, you can fork it as you wish.
 
 ![Cascade Filters](assets/screenshot.gif)
@@ -26,7 +26,7 @@ To install this plugin, just download the zip version of this repository and unz
 You should now have all the plugin files under
 
     /your/site/grav/user/plugins/cascade-filters
-	
+
 > NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav) and the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) to operate.
 
 ## Configuration
@@ -79,4 +79,4 @@ Part of code forked from [@rhukster's](https://github.com/rhukster) [grav-plugin
 
 ## To Do
 
-- [ ] Maybe the UTF-8 strings need to be processed, haven't test now.
+- [ ] multiple tags: generate correct links
