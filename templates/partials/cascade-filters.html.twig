@@ -23,7 +23,7 @@
 
 			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} key-{{ key }}" {{ status }}>
 
-			{% if (key = 'nichtraucher') %}
+			{% if (key == 'nichtraucher') %}
 			<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}" style="width:auto;height:50px;"/>
 			{% else %}
 			text
