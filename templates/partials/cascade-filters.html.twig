@@ -21,16 +21,16 @@
 	{% set status = active? (active) : (disabled) %}
 			{%	if (tax == 'ja') %}
 
-			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} key-{{ key }}" {{ status }}>
+			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} keyyes key-{{ key }}" {{ status }}>
 
 			{% if (key == 'nichtraucher') %}
-			<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}" style="width:auto;height:50px;"/>
+			<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}"/>
 			{% elseif (key == 'wlan') %}
-			<img src="{{ url('theme://custom/logo/wifi-solid.svg')}}" style="width:auto;height:50px;"/>
+			<img src="{{ url('theme://custom/logo/wifi-solid.svg')}}"/>
 			{% elseif (key == 'haustiere') %}
-			<img src="{{ url('theme://custom/logo/paw-solid.svg')}}" style="width:auto;height:50px;"/>
+			<img src="{{ url('theme://custom/logo/paw-solid.svg')}}"/>
 			{% elseif (key == 'parking') %}
-			<img src="{{ url('theme://custom/logo/parking-solid.svg')}}" style="width:auto;height:50px;"/>
+			<img src="{{ url('theme://custom/logo/parking-solid.svg')}}"/>
 			{% else %}
 			{{ tax }}
 			{% endif %}
