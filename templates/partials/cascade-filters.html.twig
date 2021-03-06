@@ -25,14 +25,14 @@
 
 			{% if (key == 'nichtraucher') %}
 			<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}" style="width:auto;height:50px;"/>
-			{% else if (key == 'wlan') %}
+			{% elseif (key == 'wlan') %}
 			<img src="{{ url('theme://custom/logo/wifi-solid.svg')}}" style="width:auto;height:50px;"/>
-			{% else if (key == 'haustiere') %}
+			{% elseif (key == 'haustiere') %}
 			<img src="{{ url('theme://custom/logo/paw-solid.svg')}}" style="width:auto;height:50px;"/>
-			{% else if (key == 'parking') %}
+			{% elseif (key == 'parking') %}
 			<img src="{{ url('theme://custom/logo/parking-solid.svg')}}" style="width:auto;height:50px;"/>
 			{% else %}
-			text
+			{{ tax }}
 			{% endif %}
 			</a>
 
