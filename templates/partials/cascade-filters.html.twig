@@ -19,8 +19,16 @@
 
 	{% set disabled = cascadeFilters.isDisabled((queries))?'disabled':'' %}
 	{% set status = active? (active) : (disabled) %}
-			{%	if (tax == 'ja' or tax == 'nein') %}
-			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} key-{{ key }}" {{ status }}>{{ tax }}</a>
+			{%	if (tax == 'ja') %}
+
+			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} key-{{ key }}" {{ status }}>
+
+			{% if (key = 'nichtraucher') %}
+			<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}" style="width:auto;height:50px;"/>
+			{% else %}
+			text
+			{% endif %}
+			</a>
 
 			{% else %}
         <a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax }}</a>
