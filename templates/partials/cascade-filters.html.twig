@@ -19,7 +19,7 @@
 
 	{% set disabled = cascadeFilters.isDisabled((queries))?'disabled':'' %}
 	{% set status = active? (active) : (disabled) %}
-			{%	if (tax == 'Ja' or tax == 'nein') %}
+			{%	if (tax == 'ja' or tax == 'nein') %}
 			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>janeinquery{{ tax }}</a>
 
 			{% else %}
