@@ -19,24 +19,35 @@
 
 	{% set disabled = cascadeFilters.isDisabled((queries))?'disabled':'' %}
 	{% set status = active? (active) : (disabled) %}
-			{%	if (tax == 'ja') %}
 
-			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} keyyes key-{{ key }}" {{ status }}>
+	{% if theme_var('header.kundencode') != 'immosit' %}
+		<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax }}</a>
 
-			{% if (key == 'nichtraucher') %}
-			<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}"/>
-			{% elseif (key == 'wlan') %}
-			<img src="{{ url('theme://custom/logo/wifi-solid.svg')}}"/>
-			{% elseif (key == 'haustiere') %}
-			<img src="{{ url('theme://custom/logo/paw-solid.svg')}}"/>
-			{% elseif (key == 'parking') %}
-			<img src="{{ url('theme://custom/logo/parking-solid.svg')}}"/>
-			{% else %}
-			{{ tax }}
-			{% endif %}
-			</a>
+	{% else %}
+		{%	if (tax == 'ja') %}
 
-			{% else %}
-        <a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax }}</a>
-			{% endif %}
+		<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} keyyes key-{{ key }}" {{ status }}>
+
+		{% if (key == 'nichtraucher') %}
+		<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}"/>
+		{% elseif (key == 'wlan') %}
+		<img src="{{ url('theme://custom/logo/wifi-solid.svg')}}"/>
+		{% elseif (key == 'haustiere') %}
+		<img src="{{ url('theme://custom/logo/paw-solid.svg')}}"/>
+		{% elseif (key == 'parking') %}
+		<img src="{{ url('theme://custom/logo/parking-solid.svg')}}"/>
+		{% else %}
+		{{ tax }}
+		{% endif %}
+		</a>
+
+		{% else %}
+			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax }}</a>
+		{% endif %}
+	{% endif %}
+
+
+
+
+
 {% endmacro %}
