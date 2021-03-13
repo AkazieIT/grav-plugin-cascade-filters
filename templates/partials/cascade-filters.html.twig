@@ -21,12 +21,12 @@
 	{% set status = active? (active) : (disabled) %}
 
 	{% if theme_var('header.kundencode') != 'immosit' %}
-		<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax }}</a>
+		<a href="{{ url }}/?{{ queries|url_encode }}" class="button {{ status }}">{{ tax }}</a>
 
 	{% else %}
 		{%	if (tax == 'ja') %}
 
-		<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }} keyyes key-{{ key }}" {{ status }}>
+		<a href="{{ url }}/?{{ queries|url_encode }}" class="button {{ status }} keyyes key-{{ key }}">
 
 		{% if (key == 'nichtraucher') %}
 		<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}"/>
