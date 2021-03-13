@@ -29,19 +29,19 @@
 		<a href="{{ url }}/?{{ queries|url_encode }}" class="button {{ status }} keyyes key-{{ key }}">
 
 		{% if (key == 'nichtraucher') %}
-		<img src="{{ url('theme://custom/logo/smoking-ban-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/smoking-ban-solid-white.svg')}}"/>
 		{% elseif (key == 'wlan') %}
-		<img src="{{ url('theme://custom/logo/wifi-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/wlan-white.svg')}}"/>
 		{% elseif (key == 'haustiere') %}
-		<img src="{{ url('theme://custom/logo/paw-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/paw-solid-white.svg')}}"/>
 		{% elseif (key == 'waschmaschine') %}
-		<img src="{{ url('theme://custom/logo/washer-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/washer-solid-white.svg')}}"/>
 		{% elseif (key == 'zentrumsnah') %}
-		<img src="{{ url('theme://custom/logo/map-marker-smile-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/ortsmarker-white.svg')}}"/>
 		{% elseif (key == 'parking') %}
-		<img src="{{ url('theme://custom/logo/parking-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/parking-solid-white.svg')}}"/>
 		{% elseif (key == 'fahrstuhl') %}
-		<img src="{{ url('theme://custom/logo/sort-circle-solid.svg')}}"/>
+		<img src="{{ url('theme://custom/logo/sort-circle-solid-white.svg')}}"/>
 		{% else %}
 		{{ tax }}
 		{% endif %}
