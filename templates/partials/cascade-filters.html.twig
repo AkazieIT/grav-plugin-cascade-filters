@@ -40,13 +40,15 @@
 		<img src="{{ url('theme://custom/logo/map-marker-smile-solid.svg')}}"/>
 		{% elseif (key == 'parking') %}
 		<img src="{{ url('theme://custom/logo/parking-solid.svg')}}"/>
+		{% elseif (key == 'fahrstuhl') %}
+		<img src="{{ url('theme://custom/logo/sort-circle-solid.svg')}}"/>
 		{% else %}
 		{{ tax }}
 		{% endif %}
 		</a>
 
 		{% else %}
-			<a href="{{ url }}/?{{ queries|url_encode }}" type="button" class="button {{ status }}" {{ status }}>{{ tax }}</a>
+			<a href="{{ url }}/?{{ queries|url_encode }}" class="button {{ status }}">{{ tax }}</a>
 		{% endif %}
 	{% endif %}
 
