@@ -29,19 +29,19 @@
 		<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }} keyyes key-{{ key }}">
 
 		{% if (key == 'nichtraucher') %}
-		<img src="{{ url('theme://custom/logo/smoking-ban-solid-white.svg')}}"/> <div><p class="belement">Nichtraucher</p></div>
+		<img src="{{ url('theme://custom/logo/smoking-ban-solid-white.svg')}}"/> <div class="belement">Nichtraucher</div>
 		{% elseif (key == 'wlan') %}
-		<img src="{{ url('theme://custom/logo/wlan-white.svg')}}"/> <div><p class="belement">WLAN</p></div>
+		<img src="{{ url('theme://custom/logo/wlan-white.svg')}}"/> <div class="belement">WLAN</div>
 		{% elseif (key == 'haustiere') %}
-		<img src="{{ url('theme://custom/logo/paw-solid-white.svg')}}"/> <div><p class="belement">Haustiere</p></div>
+		<img src="{{ url('theme://custom/logo/paw-solid-white.svg')}}"/> <div class="belement">Haustiere</div>
 		{% elseif (key == 'waschmaschine') %}
-		<img src="{{ url('theme://custom/logo/washer-solid-white.svg')}}"/> <div><p class="belement">Waschmaschine</p></div>
+		<img src="{{ url('theme://custom/logo/washer-solid-white.svg')}}"/> <div class="belement">Waschmaschine</div>
 		{% elseif (key == 'zentrumsnah') %}
-		<img src="{{ url('theme://custom/logo/ortsmarker-white.svg')}}"/> <div><p class="belement">Zentrumsnah</p></div>
+		<img src="{{ url('theme://custom/logo/ortsmarker-white.svg')}}"/> <div class="belement">Zentrumsnah</div>
 		{% elseif (key == 'parking') %}
-		<img src="{{ url('theme://custom/logo/parking-solid-white.svg')}}"/> <div><p class="belement">Parking</p></div>
+		<img src="{{ url('theme://custom/logo/parking-solid-white.svg')}}"/> <div class="belement">Parking</div>
 		{% elseif (key == 'fahrstuhl') %}
-		<img src="{{ url('theme://custom/logo/sort-circle-solid-white.svg')}}"/> <div><p class="belement">Fahrstuhl</p></div>
+		<img src="{{ url('theme://custom/logo/sort-circle-solid-white.svg')}}"/> <div class="belement">Fahrstuhl</div>
 		{% else %}
 		{{ tax }}
 		{% endif %}
