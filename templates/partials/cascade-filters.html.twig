@@ -45,7 +45,8 @@
 		{% else %}
 		{{ tax }}
 		{% endif %}
-		</a>  
+		{{ tax }}
+		</a>
 
 		{% else %}
 			<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">{{ tax }}</a>
