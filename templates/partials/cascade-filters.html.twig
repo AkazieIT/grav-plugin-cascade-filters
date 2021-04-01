@@ -4,7 +4,7 @@
 
 	{% if  queries[key] is defined and ( queries[key] == tax or queries[key] is iterable ) %}
 		{% if queries[key] is iterable %}
-			{% if tax in queries[key]|sort %}
+			{% if tax in queries[key]|sort('desc') %}
 
 				{% set queries = queries|merge({(key): null}) %}
 				{% set active = 'is-active' %}
