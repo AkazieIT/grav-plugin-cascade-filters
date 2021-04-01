@@ -4,7 +4,7 @@
 
 	{% if  queries[key] is defined and ( queries[key] == tax or queries[key] is iterable ) %}
 		{% if queries[key] is iterable %}
-			{% if tax in queries[key] %}
+			{% if tax in queries[key]|sort %}
 
 				{% set queries = queries|merge({(key): null}) %}
 				{% set active = 'is-active' %}
@@ -55,9 +55,9 @@
 
 		{% else %}
 				{%	if (tax == '2 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/2_Betten.svg')}}" style="width:30px;height:auto;"/> Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/2_Betten.svg')}}" style="width:30px;height:auto;"/>Betten</a>
 				{%	elseif (tax == '3 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/3_Betten.svg')}}" style="width:30px;height:auto;"/> Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/3_Betten.svg')}}" style="width:30px;height:auto;"/>Betten</a>
 				{%	elseif (tax == 'ab 4 Betten') %}
 					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}">ab<img src="{{ url('theme://custom/logo/4_Betten.svg')}}" style="width:30px;height:auto;"/>Betten</a>
 				{% else %}
