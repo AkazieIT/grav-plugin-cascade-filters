@@ -55,11 +55,11 @@
 
 		{% else %}
 				{%	if (tax == '2 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">ab <img src="{{ url('theme://custom/logo/2_Betten.svg.svg')}}"/> Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">ab <img src="{{ url('theme://custom/logo/2_Betten.svg')}}"/> Betten</a>
 				{%	elseif (tax == '3 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">ab <img src="{{ url('theme://custom/logo/3_Betten.svg.svg')}}"/> Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">ab <img src="{{ url('theme://custom/logo/3_Betten.svg')}}"/> Betten</a>
 				{%	elseif (tax == 'ab 4 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">ab <img src="{{ url('theme://custom/logo/4_Betten.svg.svg')}}"/> Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">ab <img src="{{ url('theme://custom/logo/4_Betten.svg')}}"/> Betten</a>
 				{% else %}
 					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">{{ tax }}</a>
 				{% endif %}
