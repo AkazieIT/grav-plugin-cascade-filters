@@ -39,7 +39,7 @@
 		{% elseif (key == 'zentrumsnah') %}
 		<img src="{{ url('theme://custom/logo/ortsmarker-white.svg')}}"/> <div class="belement">Zentrumsnah</div>
 		{% elseif (key == 'garage') %}
-		<img src="{{ url('theme://custom/logo/parking-solid-white.svg')}}"/> <div class="belement">Garage</div>
+		<img src="{{ url('theme://custom/logo/Garage.svg')}}"/> <div class="belement">Garage</div>
 		{% elseif (key == 'fahrstuhl') %}
 		<img src="{{ url('theme://custom/logo/sort-circle-solid-white.svg')}}"/> <div class="belement">Fahrstuhl</div>
 		{% elseif (key == 'balkon') %}
@@ -55,11 +55,11 @@
 
 		{% else %}
 				{%	if (tax == '2 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/2_Betten.svg')}}" style="width:30px;height:auto;"/>Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/2_Betten.svg')}}" style="width:30px;height:auto;"/><br />Betten</a>
 				{%	elseif (tax == '3 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/3_Betten.svg')}}" style="width:30px;height:auto;"/>Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}"><img src="{{ url('theme://custom/logo/3_Betten.svg')}}" style="width:30px;height:auto;"/><br />Betten</a>
 				{%	elseif (tax == 'ab 4 Betten') %}
-					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}">ab<img src="{{ url('theme://custom/logo/4_Betten.svg')}}" style="width:30px;height:auto;"/>Betten</a>
+					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button keyyes {{ status }}">ab<img src="{{ url('theme://custom/logo/4_Betten.svg')}}" style="width:30px;height:auto;"/><br />Betten</a>
 				{% else %}
 					<a href="{{ url }}/?{{ queries|url_encode }}#catcont" class="button {{ status }}">{{ tax }}</a>
 				{% endif %}

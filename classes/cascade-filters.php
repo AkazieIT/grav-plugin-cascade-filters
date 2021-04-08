@@ -81,7 +81,7 @@ class CascadeFilters {
 						$taxonomylist[ $x ][ strval( $key ) ] = count( $value );
 						$partial[ strval( $key ) ]            = count( $value );
 					}
-					arsort( $partial );
+					//arsort( $partial );
 					$newlist[ $x ] = $partial;
 				}
 			}
